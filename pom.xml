@@ -40,8 +40,6 @@
       </dependency>
 		
 
-
-
 		<!-- <dependency> -->
 		<!-- <groupId>mysql</groupId> -->
 		<!-- <artifactId>mysql-connector-java</artifactId> -->
@@ -99,11 +97,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
-
-
-
-
-	</dependencies>
+		</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
@@ -126,6 +120,12 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		
+		<repository>
+  <id>project.local</id>
+  <name>project</name>
+  <url>file:${project.basedir}/lib</url>
+</repository>
 	</repositories>
 
 
