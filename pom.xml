@@ -32,12 +32,10 @@
 		</dependency>
 		
 		<dependency>
-         <groupId>chesspresso</groupId>
-         <artifactId>Chesspresso-lib</artifactId>
-         <scope>system</scope>
+         <groupId>archiduchess.microservice_onlinegame</groupId>
+         <artifactId>chesspresso</artifactId>
          <version>0.9.2</version>
-         <systemPath>${basedir}\src\lib\Chesspresso-lib.jar</systemPath>
-      </dependency>
+         </dependency>
 		
 
 		<!-- <dependency> -->
@@ -124,7 +122,7 @@
 		<repository>
   <id>project.local</id>
   <name>project</name>
-  <url>file:${project.basedir}/lib</url>
+  <url>file:${project.basedir}/repo</url>
 </repository>
 	</repositories>
 
