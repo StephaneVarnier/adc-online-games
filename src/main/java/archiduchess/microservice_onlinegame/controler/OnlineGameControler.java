@@ -140,7 +140,7 @@ public class OnlineGameControler {
 			;
 		}
 
-		// moves.add(game.getPosition().getFEN());
+		
 		return moves;
 	}
 
@@ -223,7 +223,7 @@ public class OnlineGameControler {
 		return filteredGames;
 	}
 
-	@ApiOperation(value = "Liste les parties ayant atteint une position donnée sous format FEN")
+	@ApiOperation(value = "Liste les parties d'un joueur donné ayant atteint une position donnée sous format FEN")
 	@RequestMapping(value = "onlineGames/user/**/fen/**", method = RequestMethod.GET)
 	public @ResponseBody List<OnlineGame> getGamesByFenAndUsername(HttpServletRequest request)
 			throws PGNSyntaxError, IOException {
@@ -232,8 +232,7 @@ public class OnlineGameControler {
 		String fenURL = requestURL.split("/fen/")[1];
 		String user = requestURL.split("/fen/")[0].split("user/")[1];
 		String fen = java.net.URLDecoder.decode(fenURL, StandardCharsets.UTF_8.name());
-		//log.info("FEN -------------------------> " + fen);
-		//log.info("User -------------------------> " + user);
+	
 
 		return getGamesbyFenAndUsername(fen, user);
 	}
@@ -247,8 +246,7 @@ public class OnlineGameControler {
 		String fenURL = requestURL.split("/fen/")[1];
 		String id = requestURL.split("/fen/")[0].split("id/")[1];
 		String fen = java.net.URLDecoder.decode(fenURL, StandardCharsets.UTF_8.name());
-		//log.info("FEN -------------------------> " + fen);
-		//log.info("id -------------------------> " + id);
+	
 
 		return getNextMoveByFenAndId(fen, id);
 	}
@@ -339,7 +337,7 @@ public class OnlineGameControler {
 		return limitList(filteredGames);
 	}
 
-	@ApiOperation(value = "Retourne le pourcentage de points pour une position et un joueur donné")
+	@ApiOperation(value = "Retourne pour chaque position d'une partie donnée le pourcentage de points obtenu par un joueur")
 	@GetMapping(value = "onlineGames/fen-list-stats/{id}/{username}")
 	public @ResponseBody List<FenStat> getStatsIdUser(@PathVariable String id, @PathVariable String username)
 			throws PGNSyntaxError, IOException {
@@ -406,9 +404,6 @@ public class OnlineGameControler {
 
 	public Game parseOnlineGame(OnlineGame onlineGame) throws PGNSyntaxError, IOException {
 		String pgnStr = removeClk(onlineGame.getPgn(), "{[", "]}");
-//		if (onlineGame.getId().equals("4578498224")) 
-//				pgnStr=pgnStr.split("40...")[0];
-//		log.info(pgnStr);
 
 		InputStream is = new ByteArrayInputStream(pgnStr.getBytes());
 		PGNReader pgn = new PGNReader(is, "");
