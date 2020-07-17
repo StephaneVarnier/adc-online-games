@@ -253,8 +253,14 @@ public class OnlineGameControler {
 	
 	public String getNextMoveByFenAndId(String fen, String id) throws PGNSyntaxError, IOException {
 		
-		int moveNumber = getFensById(id).indexOf(fen);
-		return getSansById(id).get(moveNumber);
+		String color = fen.split(" ")[1];
+		int moveNumber = color.equals("b")?1:0 + 2*(Integer.parseInt(fen.split(" ")[5])-1)  ;
+		
+		try {
+			return getSansById(id).get(moveNumber);
+		}
+		catch (IndexOutOfBoundsException e) {	}
+		return null;
 	}
 	
 
