@@ -23,9 +23,6 @@ public interface OnlineGameRepository extends MongoRepository<OnlineGame,  Strin
 
 	Iterable<OnlineGame> findByResultat(String res);
 	
-	//OnlineGame findGameById(String id);
-	
-
 	OnlineGame findGameById(long id);
 
 
