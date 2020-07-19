@@ -1,6 +1,6 @@
 # adc-online-games
 
-automatic deploy from dev.0.4
+automatic deploy from master
 
 ENVIRONNEMENT VARIABLES : 
 
