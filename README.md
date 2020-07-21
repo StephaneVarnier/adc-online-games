@@ -12,15 +12,17 @@ ArchiDuChess (ADC) is an application allowing his users to consult :
 This is one of the microservices used in the backend part of the application
 was generated in Java 8, with the framework Spring Boot
 
+It uses the open-source java library Chesspresso : http://www.chesspresso.org/
+
 ### All the components used for this application 
 
-https://github.com/StephaneVarnier/adc-front
-https://github.com/StephaneVarnier/adc-online-games
-https://github.com/StephaneVarnier/adc-chess-stats
-https://github.com/StephaneVarnier/adc-users
-https://github.com/StephaneVarnier/adc-icc-api
-https://github.com/StephaneVarnier/adc-leaderboard
-https://github.com/StephaneVarnier/chessboardjs
+- https://github.com/StephaneVarnier/adc-front
+- https://github.com/StephaneVarnier/adc-online-games
+- https://github.com/StephaneVarnier/adc-chess-stats
+- https://github.com/StephaneVarnier/adc-users
+- https://github.com/StephaneVarnier/adc-icc-api
+- https://github.com/StephaneVarnier/adc-leaderboard
+- https://github.com/StephaneVarnier/chessboardjs
 
 
 ### Installation of adc-online-games
