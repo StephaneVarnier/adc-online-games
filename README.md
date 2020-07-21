@@ -39,11 +39,11 @@ maven clean install package
 
 ### ENVIRONNEMENT VARIABLES : 
 
-GAMES_NB_LIMIT (default : 10000)
-MONGO_DB
-MONGO_PASSWORD
-MONGO_USER
-ONLINE_GAMES_PORT(default : 9999)
+- GAMES_NB_LIMIT (default : 10000)
+- MONGO_DB
+- MONGO_PASSWORD
+- MONGO_USER
+- ONLINE_GAMES_PORT(default : 9999)
 
 ### API documentation 
 http://localhost:9999/swagger-ui.html#/  (if you did not change the ONLINE_GAMES_PORT) 
